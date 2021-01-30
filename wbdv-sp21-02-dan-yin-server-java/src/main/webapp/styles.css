@@ -1,3 +1,14 @@
-.color-red {
-  color: purple;
+.wbdv-sticky-nav-bar {
+  background-color: lightblue;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.container {
+  padding-top: 58px;
+}
+
+.col-2 {
+  font-size: 1em;
 }
