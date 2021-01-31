@@ -2,6 +2,10 @@ body {
   background-color: #DFDFDF;
 }
 
+.container {
+  padding-top: 110px;
+}
+
 .row {
   background-color: white;
   margin-top: 1px;
@@ -15,11 +19,23 @@ body {
 #topnav {
   background-color: #4c8bf5;
   padding-bottom: 10px;
+}
 
+#topnav a{
+  color: #DFDFDF;
+}
+
+#topnav .col-2{
+  color: #DFDFDF;
+  font-weight: bold;
 }
 
 #input-course-title {
   background-color: #90caf9;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
 }
 
 #list-category {
@@ -92,7 +108,7 @@ body {
     max-width: 91.6%;
     flex: none;
   }
-  
+
   #list-of-courses .col-2 {
     display: none;
   }
