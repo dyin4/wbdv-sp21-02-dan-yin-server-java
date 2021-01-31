@@ -92,11 +92,7 @@ body {
     max-width: 91.6%;
     flex: none;
   }
-
-  /*#list-of-courses .col-1 {*/
-  /*  max-width: 8.33%*/
-  /*}*/
-
+  
   #list-of-courses .col-2 {
     display: none;
   }
