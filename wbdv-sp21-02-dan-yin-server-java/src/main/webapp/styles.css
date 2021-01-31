@@ -1,12 +1,13 @@
 .wbdv-sticky-nav-bar {
-  background-color: lightblue;
+  background-color: #4c8bf5;
   padding: 10px;
   position: fixed;
   width: 100%;
   z-index: 1;
+  height: 55px;
 }
 .container {
-  padding-top: 58px;
+  padding-top: 116px;
 }
 
 .col-2 {

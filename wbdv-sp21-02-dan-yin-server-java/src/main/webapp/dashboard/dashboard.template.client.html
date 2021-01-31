@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../styles.css" rel="stylesheet">
+  <link href="./dashboard.styles.client.css" rel="stylesheet">
+
+  <title>Dashboard Grid</title>
+</head>
+<body>
+    <div class="wbdv-sticky-nav-bar">
+        <div class="row" id="topnav">
+            <div class="col-1">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="col-2">
+                Course Manager
+            </div>
+            <div class="col-8">
+                <input class="form-control" id="input-course-title"
+                      placeholder="New Course Title"/>
+            </div>
+            <div class="col-1">
+                <i class="fas fa-plus-circle fa-2x"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="wbdv-sticky-nav-bar" id="list-category">
+<!--    <h1>Dashboard Table</h1>-->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6" id="course-title">Title</div>
+                <div class="col-2" id="owned-by">Owned by</div>
+                <div class="col-2" id="modified-text">Last modified by me</div>
+                <div class="col-2" id="sort-view-btn">
+                    <a href="#" class="sort-view-btn"><i class="fas fa-th"></i></a>
+                    <a href="#" class="sort-view-btn"> <i class="fas fa-sort-alpha-down"></i></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" id="list-of-courses">
+        <div class="row">
+            <div class="col-6">
+                    <a href="../editor/editor.template.client.html" id="title">
+                        <i class="fas fa-file"></i>
+                        CS5610 Software Engineering Graduate
+                    </a>
+            </div>
+            <div class="col-2">Jannunzi</div>
+            <div class="col-3">1/25/2021</div>
+            <div class="col-1" id="trash">
+                <i class="fas fa-trash"></i>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              CS4550 Software Engineering Undergraduate
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              CS4500 WebDev Undergraduate
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              CS5610 WebDev Graduate
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              CS5520 Intro to Database
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+        <br/>
+        <h5>Yesterday</h5>
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              WEBDEV 2-React
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+        <br/>
+        <h5>Previous 7 days</h5>
+        <div class="row">
+          <div class="col-6">
+            <a href="../editor/editor.template.client.html">
+              <i class="fas fa-file"></i>
+              WEBDEV Syllabus
+            </a>
+          </div>
+          <div class="col-2">Jannunzi</div>
+          <div class="col-3">1/25/2021</div>
+          <div class="col-1">
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+              <a href="../editor/editor.template.client.html">
+                <i class="fas fa-file"></i>
+                WEBDEV 1- JavaScript
+              </a>
+            </div>
+            <div class="col-2">Jannunzi</div>
+            <div class="col-3">1/25/2021</div>
+            <div class="col-1">
+                <i class="fas fa-trash"></i>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <a href="#" class="float">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
+</body>
+
+</html>
