@@ -1,0 +1,12 @@
+.wbdv-sticky-nav-bar {
+  background-color: #4c8bf5;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 55px;
+}
+
+.col-2 {
+  font-size: 1em;
+}
