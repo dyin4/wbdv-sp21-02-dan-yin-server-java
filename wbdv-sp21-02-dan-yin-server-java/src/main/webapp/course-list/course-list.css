@@ -1,0 +1,13 @@
+h1 {
+    background-color: red;
+    color: yellow;
+}
+
+#table-rows {
+    background-color: #4c8bf5;
+}
+
+.dy-create-btn {
+    background-color: green;
+    color: white;
+}
