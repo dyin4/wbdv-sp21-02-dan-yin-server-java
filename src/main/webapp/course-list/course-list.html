@@ -8,9 +8,11 @@
   <link rel="stylesheet" href=
       "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link href="user-admin.style.client.css" rel="stylesheet" />
-<!--  <script src="../services/user.service.client.js"></script>-->
+  <link href="course-list.css" rel="stylesheet" />
+  <script src="../service/service.course.client.js"></script>
 <!--  <script src="user-admin.controller.client.js"></script>-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="course-list.js"></script>
 
 </head>
 <body>
@@ -27,81 +29,78 @@
                     <th></th>
                 </tr>
                 <tr>
-                    <th><input class="form-control"/></th>
-                    <th><input class="form-control"/></th>
-                    <th><input type='number' class="form-control"/></th>
-                    <th><select class="form-control">
+                    <th><input class="dy-title-fld form-control"/></th>
+                    <th><input class="dy-section-fld form-control"/></th>
+                    <th><input type='number' class="dy-seats-fld form-control"/></th>
+                    <th><select class="dy-semester-fld form-control">
                         <option>Spring</option>
                         <option>Summer</option>
                         <option>Fall</option>
                     </select>
                     </th>
                     <th>
-                        <button>Create</button>
-                        <button>Update</button>
+                        <button class="dy-create-btn">Create</button>
+                        <button class="dy-update-btn">Update</button>
                     </th>
                 </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>CS5400</td>
-                <td>03</td>
-                <td>23</td>
-                <td>Spring</td>
-                <td>
-                  <button>Delete</button>
-                  <button>Select</button>
-                </td>
-            </tr>
-            <tr>
-              <td>CS5400</td>
-              <td>03</td>
-              <td>23</td>
-              <td>Spring</td>
-              <td>
-                <button>Delete</button>
-                <button>Select</button>
-              </td>
-            </tr>
-            <tr>
-              <td>CS5400</td>
-              <td>03</td>
-              <td>23</td>
-              <td>Spring</td>
-              <td>
-                <button>Delete</button>
-                <button>Select</button>
-              </td>
-            </tr>
-            <tr>
-              <td>CS5400</td>
-              <td>03</td>
-              <td>23</td>
-              <td>Spring</td>
-              <td>
-                <button>Delete</button>
-                <button>Select</button>
-              </td>
-            </tr>
-            <tr>
-              <td>CS5400</td>
-              <td>03</td>
-              <td>23</td>
-              <td>Spring</td>
-              <td>
-                <button>Delete</button>
-                <button>Select</button>
-              </td>
-            </tr>
+            <tbody id="table-rows">
+<!--            <tr>-->
+<!--                <td>CS5400</td>-->
+<!--                <td>03</td>-->
+<!--                <td>23</td>-->
+<!--                <td>Spring</td>-->
+<!--                <td>-->
+<!--                  <button>Delete</button>-->
+<!--                  <button>Select</button>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>CS5400</td>-->
+<!--              <td>03</td>-->
+<!--              <td>23</td>-->
+<!--              <td>Spring</td>-->
+<!--              <td>-->
+<!--                <button>Delete</button>-->
+<!--                <button>Select</button>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>CS5400</td>-->
+<!--              <td>03</td>-->
+<!--              <td>23</td>-->
+<!--              <td>Spring</td>-->
+<!--              <td>-->
+<!--                <button>Delete</button>-->
+<!--                <button>Select</button>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>CS5400</td>-->
+<!--              <td>03</td>-->
+<!--              <td>23</td>-->
+<!--              <td>Spring</td>-->
+<!--              <td>-->
+<!--                <button>Delete</button>-->
+<!--                <button>Select</button>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>CS5400</td>-->
+<!--              <td>03</td>-->
+<!--              <td>23</td>-->
+<!--              <td>Spring</td>-->
+<!--              <td>-->
+<!--                <button>Delete</button>-->
+<!--                <button>Select</button>-->
+<!--              </td>-->
+<!--            </tr>-->
 
 
             </tbody>
         </table>
 
     </div>
-
-    <script src="course-list.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 </body>
 </html>
