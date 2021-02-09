@@ -23,22 +23,25 @@ function createUser() {
   userService.createUser(newUser)
   .then(function (actualUser) {
     users.push(actualUser)
-    renderCourses(users)
+    renderUsers(users)
+    clearInput()
   })
 }
 // function deleteUser() { … }
 function updateUser() {
-  selectedCourse.title = $titleFld.val()
-  selectedCourse.semester = $semesterFld.val()
-  selectedCourse.seats = $seatsFld.val()
-  courseService.updateCourse(selectedCourse._id, selectedCourse)
+  selectedUser.username =  $usernameFld.val()
+  selectedUser.password = $passwordFld.val()
+  selectedUser.firstname = $firstNameFld.val()
+  selectedUser.lastname = $lastNameFld.val()
+  selectedUser.role = $roleFld.val()
+  userService.updateUser(selectedUser._id, selectedUser)
   .then(status => {
-    var index = courses.findIndex(course => course._id === selectedCourse._id)
-    courses[index] = selectedCourse
-    renderCourses(courses)
+    var index = users.findIndex(user => user._id === selectedUser._id)
+    users[index] = selectedUser
+    renderUsers(users)
+    clearInput()
   })
 }
-// function renderUsers(users) { … }
 
 function deleteCourse(event) {
   var button = $(event.target)
@@ -54,13 +57,14 @@ function deleteCourse(event) {
 
 function selectUser(event) {
   console.log(event.target)
-  // var id = $(event.target).attr("id")
+  var id = $(event.target).attr("id")
   console.log(id)
-  // selectedUser = users.find(user => user._id === id)
-  // $titleFld.val(selectedCourse.title)
-  // $seatsFld.val(selectedCourse.seats)
-  // $sectionFld.val(selectedCourse.section)
-  // $semesterFld.val(selectedCourse.semester)
+  selectedUser = users.find(user => user._id === id)
+  $usernameFld.val(selectedUser.username)
+  $passwordFld.val(selectedUser.password)
+  $firstNameFld.val(selectedUser.firstname)
+  $lastNameFld.val(selectedUser.lastname)
+  $roleFld.val(selectedUser.role)
 }
 
 function renderUsers() {
@@ -77,7 +81,7 @@ function renderUsers() {
                             <td class="wbdv-actions">
                                 <span class="float-right">
                                   <i id="${i}" class="fa-2x fa fa-times wbdv-remove"></i>
-                                  <i id="${i}" class="fa-2x fa fa-pencil wbdv-edit"></i>
+                                  <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-edit"></i>
                                 </span>
                             </td>
                           </tr>`)
@@ -88,6 +92,13 @@ function renderUsers() {
   $(".wbdv-edit").click(selectUser)
 }
 
+function clearInput() {
+  document.getElementById("usernameFld").value = "";
+  document.getElementById("passwordFld").value = "";
+  document.getElementById("firstNameFld").value = "";
+  document.getElementById("lastNameFld").value = "";
+  document.getElementById("roleFld").value = "FACULTY";
+}
 function main() {
   $tbody = jQuery(".wbdv-tbody")
   $createBtn = $(".wbdv-create")
