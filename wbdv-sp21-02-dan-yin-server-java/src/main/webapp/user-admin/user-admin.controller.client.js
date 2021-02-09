@@ -69,7 +69,7 @@ function renderUsers() {
     var user = users[i]
     $tbody.append(`   <tr class="wbdv-template wbdv-user wbdv-hidden">
                             <td class="wbdv-username">${user.username}</td>
-                            <td>&nbsp;</td>
+                            <td class="wbdv-password">${user.password}</td>
                             <td class="wbdv-first-name">${user.firstname}</td>
                             <td class="wbdv-last-name">${user.lastname}</td>
                             <td class="wbdv-role">${user.role}</td>
