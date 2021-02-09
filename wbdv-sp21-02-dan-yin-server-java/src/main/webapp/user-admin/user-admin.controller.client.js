@@ -7,8 +7,6 @@ var userService = new AdminUserServiceClient();
 var selectedUser = null
 
 var users = [
-  {username: "ada", password: "02", firstname: "Love", lastname: "DD",
-    role: "Admin"}
 ]
 
 function createUser() {
@@ -27,7 +25,16 @@ function createUser() {
     clearInput()
   })
 }
-// function deleteUser() { … }
+function deleteUser(event) {
+  var button = $(event.target)
+  var index = button.attr("id")
+  var id = users[index]._id
+  userService.deleteUser(id)
+  .then(function (status) {
+    users.splice(index,1);
+    renderUsers(users)
+  })
+}
 function updateUser() {
   selectedUser.username =  $usernameFld.val()
   selectedUser.password = $passwordFld.val()
@@ -42,18 +49,6 @@ function updateUser() {
     clearInput()
   })
 }
-
-function deleteCourse(event) {
-  var button = $(event.target)
-  var index = button.attr("id")
-  var id = courses[index]._id
-  courseService.deleteCourse(id)
-  .then(function (status) {
-    courses.splice(index,1);
-    renderCourses(courses)
-  })
-}
-
 
 function selectUser(event) {
   console.log(event.target)
@@ -88,7 +83,7 @@ function renderUsers() {
 
   }
 
-  // $(".wbdv-remove").click()
+  $(".wbdv-remove").click(deleteUser)
   $(".wbdv-edit").click(selectUser)
 }
 
