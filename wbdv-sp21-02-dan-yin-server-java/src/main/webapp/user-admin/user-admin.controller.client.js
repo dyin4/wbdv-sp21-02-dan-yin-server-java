@@ -1,7 +1,7 @@
 var $usernameFld, $passwordFld;
 var $firstNameFld, $lastNameFld, $roleFld;
-var $removeBtn, $editBtn, $createBtn;
-var $userRowTemplate, $tbody;
+var $editBtn, $createBtn;
+var $tbody;
 var userService = new AdminUserServiceClient();
 
 var selectedUser = null
