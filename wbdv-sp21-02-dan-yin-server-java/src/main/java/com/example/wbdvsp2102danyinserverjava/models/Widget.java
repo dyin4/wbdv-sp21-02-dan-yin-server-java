@@ -1,8 +1,18 @@
 package com.example.wbdvsp2102danyinserverjava.models;
 
-public class Widget {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "widgets")
+public class Widget {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
   private String topicId;
   private String type;
   private Integer size;
@@ -15,6 +25,15 @@ public class Widget {
   private Integer height;
   private String cssClass;
   private String style;
+  private Boolean ordered;
+
+  public Boolean getOrdered() {
+    return ordered;
+  }
+
+  public void setOrdered(Boolean ordered) {
+    this.ordered = ordered;
+  }
 
   public String getName() {
     return name;
