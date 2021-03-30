@@ -1,5 +1,6 @@
 package com.example.wbdvsp2102danyinserverjava.services;
 
+
 import com.example.wbdvsp2102danyinserverjava.models.Widget;
 import com.example.wbdvsp2102danyinserverjava.repositories.WidgetRepository;
 import java.util.ArrayList;
@@ -53,6 +54,10 @@ public class WidgetService {
 //    return ws;
   }
 
+  public Widget findWidgetById(String id) {
+    return repository.findWidgetById(id);
+  }
+
   public Integer deleteWidget(Long id) {
     repository.deleteById(id);
     return 1;
@@ -61,6 +66,10 @@ public class WidgetService {
   public Integer updateWidget(Long id, Widget widget){
     Widget originalWidget = repository.findById(id).get();
     //TO DO COPY ALL FILED TESTING FOR NULL
+    System.out.println("originalWidget");
+    System.out.println(originalWidget);
+    System.out.println(widget.getUrl());
+    System.out.println("---------");
     originalWidget.setText(widget.getText());
     originalWidget.setType(widget.getType());
     originalWidget.setSize(widget.getSize());
@@ -68,6 +77,8 @@ public class WidgetService {
     originalWidget.setOrdered(widget.getOrdered());
     originalWidget.setHeight(widget.getHeight());
     originalWidget.setWidth(widget.getWidth());
+    System.out.println(originalWidget.getOrdered());
+    System.out.println(originalWidget.getUrl());
 
     repository.save(originalWidget);
     return 1;
